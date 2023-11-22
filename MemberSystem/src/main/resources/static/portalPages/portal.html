@@ -25,54 +25,8 @@
   </head>
   <!--end copy for each HTML files-->
 
-  <body class="portal">
-    <div class="sidebar">
-      <img src="../images/BETTERLogo.svg" class="logo" />
-      <ul class="menu">
-        <li>
-          <a href="portal.html">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="accountPage.html">
-            <i class="fa-solid fa-user"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="viewSubordinates.html">
-            <i class="fa-solid fa-person"></i>
-            <span>Subordinates</span>
-          </a>
-        </li>
-        <!-- <li>
-          <a href="#">
-            <i class="fa-solid fa-square-poll-horizontal"></i>
-            <span>Polls</span>
-          </a>
-        </li> -->
-        <li>
-          <a href="myAttendance.html">
-            <i class="fa-solid fa-square-poll-horizontal"></i>
-            <span>Attendance</span>
-          </a>
-        </li>
-        <li>
-          <a href="rankPage.html">
-            <i class="fa-solid fa-ranking-star"></i>
-            <span>Rank</span>
-          </a>
-        </li>
-        <li class="log-out">
-          <a href="../index.html">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Log Out</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <body class="portal" id="portalID">
+    
 
     <div class="main-portal">
       <header class="header-portal" id="welcomeStatement">
@@ -157,14 +111,102 @@
                 <h2 class="event-title">eventTitle</h2>
               </div>
             </div>
-            <div class="sign-in-container">
+            <!-- <div class="sign-in-container">
               <h2 class="attend-event-p">Attend Todays Event</h2>
               <div class="sign-in">
                 <img src="../images/right-to-bracket-solid.svg" class="signInImage" /> 
                 <p class="signIn">Sign In</p>      
               </div>
+            </div> -->
+          </div>
+          <div>
+            <div class="body-myAttendance">
+              <div class="arrow-buttons-for-attendance-body">
+                <button>&#8592;</button>
+                <button>&#8594;</button>
+              </div>
+              <ul class="body-calender">
+                <i class="day-of-week-Sun"> Sunday </i>
+                <i class="day-of-week-Mon"> Monday </i>
+                <i class="day-of-week-Tue"> Tuesday </i>
+                <i class="day-of-week-Wed"> Wednesday </i>
+                <i class="day-of-week-Thu"> Thursday </i>
+                <i class="day-of-week-Fri"> Friday </i>
+                <i class="day-of-week-Sat"> Saturday </i>
+              </ul>
+              <form>
+                <div class="boxes-myAttendance">
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="sundayBox"
+                      name="sundayBox"
+                      unchecked
+                    />
+                    <label for="sundayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="mondayBox"
+                      name="mondayBox"
+                      unchecked
+                    />
+                    <label for="mondayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="tuesdayBox"
+                      name="tuesdayBox"
+                      unchecked
+                    />
+                    <label for="tuesdayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="wednesdayBox"
+                      name="wednesdayBox"
+                      unchecked
+                    />
+                    <label for="wednesdayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="thursdayBox"
+                      name="thursdayBox"
+                      unchecked
+                    />
+                    <label for="thursdayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="fridayBox"
+                      name="fridayBox"
+                      unchecked
+                    />
+                    <label for="fridayBox">Present</label>
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="saturdayBox"
+                      name="saturdayBox"
+                      unchecked
+                    />
+                    <label for="saturdayBox">Present</label>
+                  </div>
+                </div>
+                <div class="submitButton-myAttendance">
+                  <input class="mySubmitButton" type="submit" value="Submit" />
+                </div>
+              </form>
             </div>
           </div>
+
         </div>
       </main>
     </div>

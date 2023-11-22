@@ -85,6 +85,82 @@
     width: 100%;
 }
 
+.arrow-buttons-for-attendance-body{
+
+
+    flex-direction: row;
+    justify-content: center;
+
+}
+.myAttendance-body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.header-myAttendance{
+    font-family: "garamond-premier-pro", serif;
+    font-size: 30px;
+    text-indent: 30px;
+    height: 80px;
+    padding-top: 30px;
+
+
+}
+
+.body-myAttendance{
+    background: rgba(0, 0, 0, .05);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+
+.body-calender{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.day-of-week{
+
+}
+
+.boxes-myAttendance{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.submitButton-myAttendance{
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySubmitButton {
+    padding: 10px 25px; 
+    font-size: 16px; 
+    background-color: rgb(0, 183, 255);
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .mySubmitButton:hover {
+    background-color: rgba(255, 89, 0, 0.798); 
+  }
+
 /*-------------------------------*/
 /*Content section*/
 .main-portal{
@@ -870,73 +946,6 @@
 
 /*  ---------- myAttendance Page Start---------- */
 
-.myAttendance-body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-}
 
-.header-myAttendance{
-    font-family: "garamond-premier-pro", serif;
-    font-size: 30px;
-    text-indent: 30px;
-    height: 80px;
-    padding-top: 30px;
-
-
-}
-
-.body-myAttendance{
-    background: rgba(0, 0, 0, .05);
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-
-}
-
-.body-calender{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.day-of-week{
-
-}
-
-.boxes-myAttendance{
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.submitButton-myAttendance{
-    padding: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.mySubmitButton {
-    padding: 10px 25px; 
-    font-size: 16px; 
-    background-color: rgb(0, 183, 255);
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-  }
-  
-  .mySubmitButton:hover {
-    background-color: rgba(255, 89, 0, 0.798); 
-  }
 /*  ---------- myAttendance Page end---------- */
 

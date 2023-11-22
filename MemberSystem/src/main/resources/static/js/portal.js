@@ -2,10 +2,59 @@
 document.addEventListener('DOMContentLoaded', function () {
     if (isTokenValid()){
 
+        displayMenu();
         displayAccount();
         logoutEventListener();
     }
 });
+
+function displayMenu(){
+    const menuContainer = document.getElementById("portalID");
+    const menuHTML = 
+    `<div class="sidebar">
+    <img src="../images/BETTERLogo.svg" class="logo" />
+    <ul class="menu">
+      <li>
+        <a href="portal.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="accountPage.html">
+          <i class="fa-solid fa-user"></i>
+          <span>Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="viewSubordinates.html">
+          <i class="fa-solid fa-person"></i>
+          <span>Subordinates</span>
+        </a>
+      </li>
+      <li>
+        <a href="myAttendance.html">
+          <i class="fa-solid fa-square-poll-horizontal"></i>
+          <span>Attendance</span>
+        </a>
+      </li>
+      <li>
+        <a href="rankPage.html">
+          <i class="fa-solid fa-ranking-star"></i>
+          <span>Rank</span>
+        </a>
+      </li>
+      <li class="log-out">
+        <a href="../index.html">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>`;
+
+  menuContainer.insertAdjacentHTML('afterbegin', menuHTML);
+}
 
 function isTokenValid(){
 
