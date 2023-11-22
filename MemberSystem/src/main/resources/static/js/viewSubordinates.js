@@ -148,9 +148,10 @@ function clearSubordinateDetails() {
 function displaySubordinateDetailsBySearch(searchedSubordinate) {
     subordinates.forEach(function (subordinate) {
         if ((subordinate.firstName.toLowerCase().includes(searchedSubordinate.toLowerCase())) || 
-            (subordinate.lastName.toLowerCase().includes(searchedSubordinate.toLowerCase()))) {
-            addSubordinate(subordinate);
-        }
+        (subordinate.lastName.toLowerCase().includes(searchedSubordinate.toLowerCase())) ||
+        (`${subordinate.firstName} ${subordinate.lastName}`.toLowerCase().includes(searchedSubordinate.toLowerCase()))) {
+        addSubordinate(subordinate);
+        } 
     });
 }
 

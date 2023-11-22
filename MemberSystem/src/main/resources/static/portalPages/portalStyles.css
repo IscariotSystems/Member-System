@@ -253,10 +253,12 @@
     align-items: center;
     width: 100%;
     font-size: 25px;
-}
-
-.card-heading-link{
-    color: rgb(0, 183, 255);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    color:rgb(0, 183, 255);
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -267,6 +269,14 @@
     gap: 1vh;
     position: relative;
     top:-1vh;
+}
+
+.card-heading-link{
+    text-decoration: none;
+}
+
+.card-heading-link:visited{
+    color:rgb(0, 183, 255);
 }
 
 .user-rank-container{
@@ -281,6 +291,78 @@
     top: -10px;
 }
 
+
+
+.rank-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+ }
+ 
+ 
+ .rank-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+ }
+ 
+ 
+ .rank-modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    color: rgb(0, 183, 255)
+ }
+ 
+ 
+ .rank-modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+ }
+ 
+ 
+ .rank-modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+ }
+ 
+ 
+ .rank-modal-body{
+    padding: 10px 15px;
+ }
+ 
+ 
+ #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    background-color: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    pointer-events: none;
+ }
+ 
+ 
+ #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+ }
+ 
 .user-rank-header{
     font-weight: 500;
 }
@@ -300,6 +382,11 @@
 }
 
 .requirement-description{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.requirement-standing{
     font-weight: 300;
     font-size: 20px;
 }
@@ -508,7 +595,7 @@
 }
 
 .subordinate-box{
-    border-radius: 10px; /* Adjust radius for softer edges */
+    border-radius: 5px; /* Adjust radius for softer edges */
     border: 1px solid gray; /* Sets a 1px solid gray border */
 }
 
@@ -516,6 +603,7 @@
     text-align: center;
     background-color: rgba(0, 183, 255, 0.25);
     color: rgb(0, 183, 255);
+    border-radius: 5px;
 }
 
 .subordinate-innerbox{
@@ -578,6 +666,7 @@
     padding: 20px;
     gap: 20px;
     position: relative;
+    overflow: scroll;
 }
 
 .user-info-container{
@@ -695,7 +784,8 @@
 
 .user-contact{
     font-size: 35px;
-    font-family: "source-sans-pro", sans-serif;    
+    font-family: "source-sans-pro", sans-serif;   
+    width: 330px; 
 }
 
 .user-phone-number{
@@ -875,9 +965,7 @@
 }
 
 .search-branch-members-container{
-    padding-right: 10px;
-    padding-left: 10px; 
-    padding-bottom: 20px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -919,7 +1007,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
     padding-bottom: 15px;
     flex-direction: column;
 }
@@ -948,4 +1035,120 @@
 
 
 /*  ---------- myAttendance Page end---------- */
+
+/*  ---------- editProfile Page start---------- */
+
+.edit-container{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25vw;
+    margin-top: 10vh;
+}
+
+.edit-header{
+    margin-right: auto;
+    margin-bottom: 5vh;
+}
+
+.edit-name,
+.edit-contact{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 5vw;
+}
+
+.edit-name div,
+.edit-contact div{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+
+
+.edit-name input,
+.edit-contact input
+{
+    border-radius: 2px;
+    border: .5px solid black;
+    width: 20vw; 
+    height: 4vh;
+    padding: 10px;
+}
+
+.edit-name label,
+.edit-contact label {
+    margin-right: auto;
+}
+ 
+.edit-address input, 
+.edit-password input,
+.edit-new-password input,
+.confirm-new-password input{
+    border-radius: 2px;
+    border: .5px solid black; 
+    width: 45vw;
+    height: 4vh;
+    padding: 10px
+}
+
+.edit-address, 
+.edit-password,
+.edit-new-password,
+.confirm-new-password {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vh;
+}
+
+.edit-button{
+    margin-top: 2vh;
+    width: 16vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+.edit-cancel{
+    cursor: pointer;
+    width: 14vw;
+    height: 5vh;
+    padding: 10px;
+    background: none;
+    border: 1px solid rgb(0, 183, 255);
+    color: rgb(0, 183, 255);
+}
+
+.edit-cancel:hover{
+    background: rgb(0, 183, 255);
+    border: 1px solid rgba(255, 89, 0, 0.798);
+    color: white;
+}
+
+.edit-save{
+    cursor: pointer;
+    width: 14vw;
+    height: 5vh;
+    padding: 10px;
+    color: white;
+    background:rgb(0, 183, 255);
+}
+
+.edit-save:hover{
+    background:rgba(255, 89, 0, 0.798);
+}
+
+
+
+
 

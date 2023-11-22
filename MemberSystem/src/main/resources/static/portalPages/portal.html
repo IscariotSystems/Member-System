@@ -38,10 +38,19 @@
             <a href="accountPage.html" class="card-heading-link">My Profile&nbsp;&nbsp; ></a>
           </h1>
         </div>  -->
+
         <div class="dashboardItem">
-          <h1 class="cardHeading">
-            <a href="rankPage.html" class="card-heading-link">My Rank&nbsp;&nbsp; ></a>
-          </h1>
+          <button class="cardHeading" data-modal-target="#rank-modal">My Rank &nbsp;&nbsp;></button>
+          <div class="rank-modal" id="rank-modal">
+            <div class="rank-modal-header">
+              RankHere
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="rank-modal-body">
+              RankDescriptionHere
+            </div>
+          </div>
+          <div id="overlay"></div>
           <div class="card-body">
             <div class="user-rank-container">
               <h2 class="user-rank-header">
@@ -60,26 +69,29 @@
               <ol class="list-rank-requirements">
                 <li class="rank-requirement">
                   <h2 class="requirement-description">
-                    make met requirements green
+                    Days Required: 
                   </h2>
                 </li>
-                <li class="rank-requirement">
-                  <h2 class="requirement-description">
-                  dynamically create these list items
+                <li>
+                  <h2 class="requirement-standing">
+                    Minimum Standing: Good
                   </h2>
                 </li>
               </ul>
             </div>          
           </div>
         </div>
-        <div class="dashboardItem">
-          <h1 class="cardHeading">
-            <a href="viewSubordinates.html" class="card-heading-link">Subordinates&nbsp;&nbsp; ></a>
-          </h1>
-        </div>
+
+        
         <div class="dashboardItem">
           <h1 class="cardHeading">
             <a href="branchPage.html" class="card-heading-link">My Branch&nbsp;&nbsp; ></a>
+          </h1>
+        </div>
+
+        <div class="dashboardItem">
+          <h1 class="cardHeading">
+            <a href="viewSubordinates.html" class="card-heading-link">Social Score&nbsp;&nbsp; ></a>
           </h1>
         </div>
         <!-- <div class="dashboardItem">
@@ -87,6 +99,7 @@
             <a href="accountPage.html" class="card-heading-link">My Polls&nbsp;&nbsp; ></a>
           </h1>
         </div> -->
+
         <div class="dashboardItem">
           <h1 class="cardHeading">
             <a href="myAttendance.html" class="card-heading-link">My Attendance&nbsp;&nbsp; ></a>

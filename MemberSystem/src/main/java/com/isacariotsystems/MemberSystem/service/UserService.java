@@ -19,6 +19,14 @@ public interface UserService {
 
     public User updateUser(Long userId, User user);
 
+    public User updateUserFirstName(Long userId, String firstName);
+
+    public User updateUserLastName(Long userId, String lastName);
+
+    public User updateUserAddress(Long userId, String address);
+
+    public User updateUserPhoneNumber(Long userId, String phoneNumber);
+
     public Optional<List<User>> findUsersBySuperiorId(Long superiorId);
 
     public Optional<List<User>> findUsersByBranch(Long branchId);

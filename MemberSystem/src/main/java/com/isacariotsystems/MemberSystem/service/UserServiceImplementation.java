@@ -59,6 +59,62 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public User updateUserFirstName(Long userId, String firstName){
+        if(userRepository.existsById(userId))
+        {   
+            User user = userRepository.findById(userId).orElseThrow(() -> 
+            new NoSuchElementException("User " + userId + " not found"));
+
+            user.setFirstName(firstName); 
+            return userRepository.save(user);
+        }
+        else
+        {
+            throw new NoSuchElementException("User " + userId + " not found");
+        }
+    }
+
+    @Override
+    public User updateUserLastName(Long userId, String lastName) {
+        if (userRepository.existsById(userId)) {
+            User user = userRepository.findById(userId)
+                    .orElseThrow(() -> new NoSuchElementException("User " + userId + " not found"));
+    
+            user.setLastName(lastName);
+            return userRepository.save(user);
+        } else {
+            throw new NoSuchElementException("User " + userId + " not found");
+        }
+    }
+    
+    @Override
+    public User updateUserAddress(Long userId, String address) {
+        if (userRepository.existsById(userId)) {
+            User user = userRepository.findById(userId)
+                    .orElseThrow(() -> new NoSuchElementException("User " + userId + " not found"));
+    
+            user.setAddress(address);
+            return userRepository.save(user);
+        } else {
+            throw new NoSuchElementException("User " + userId + " not found");
+        }
+    }
+    
+    @Override
+    public User updateUserPhoneNumber(Long userId, String phoneNumber) {
+        if (userRepository.existsById(userId)) {
+            User user = userRepository.findById(userId)
+                    .orElseThrow(() -> new NoSuchElementException("User " + userId + " not found"));
+    
+            user.setPhoneNumber(phoneNumber);
+            return userRepository.save(user);
+        } else {
+            throw new NoSuchElementException("User " + userId + " not found");
+        }
+    }
+    
+
+    @Override
     public Optional<List<User>> findUsersBySuperiorId(Long superiorId){
         User superiorUser = userRepository.findById(superiorId).orElseThrow(() -> new NoSuchElementException("Superior user not found"));
         List<User> users = userRepository.findBySuperior(superiorUser);
