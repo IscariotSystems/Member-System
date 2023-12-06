@@ -24,8 +24,8 @@ public class SocialScoreService {
 
     @Autowired
     private AttendanceService attendanceService;
-
-    @Scheduled(fixedDelay = 24 * 60 * 60 * 1000)
+    // 24 * 60 * 60 * 1000 for day
+    @Scheduled(fixedDelay = 60000)
     public void updateSocialScores() {
         List<User> userList = userService.allUsers();
         for (User user : userList) {
